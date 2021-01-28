@@ -16,13 +16,50 @@
    <body style="background-color:yellow;">
    <h1 style="text-align:center;">Fay aldabbagh</h1>
      
-      
-  <ul class="navbar">
-    <li class="navbar"> <a href="#home"> Home </a></li>
-    <li class="navbar"> <a href="apps.html"> Apps </a></li>
-    <li class="navbar"> <a href="games.html"> Games </a></li>
+<button class="tablink" onclick="openPage('Home', this, 'yellow')">Home</button>
+<button class="tablink" onclick="openPage('Apps', this,'green')">Apps</button>
+<button class="tablink" onclick="openPage('Games', this, 'pink')">Games</button>
 
-  </ul>
+
+<div id="Home" class="tabcontent">
+  <h3>Home</h3>
+  <p>.</p>
+</div>
+
+<div id="Apps" class="tabcontent">
+  <h3>Apps</h3>
+  <p>.</p>
+</div>
+
+<div id="Games" class="tabcontent">
+  <h3>Games</h3>
+  <p>.</p>
+</div>
+
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
+</body>
+</html> 
+
+
 
     
   <img src="fay aldabbagh.jpg" alt= My artifact" width="600" height="800">
